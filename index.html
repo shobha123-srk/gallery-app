@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- AUTH (LOGIN / REGISTER) -->
+<div class="auth-box" id="authBox">
+    <h2>Login / Register</h2>
+    <input type="text" id="authUser" placeholder="Username">
+    <input type="password" id="authPass" placeholder="Password">
+    <button onclick="register()">Register</button>
+    <button onclick="login()">Login</button>
+</div>
+
+<!-- UPLOAD -->
+<div class="upload-box hidden" id="uploadBox">
+    <input type="file" id="imageInput" accept="image/*">
+    <div class="drop-area" id="dropArea">Drag & Drop Image Here</div>
+    <button onclick="addImage()">Upload</button>
+</div>
+
+<!-- GALLERY -->
+<div class="gallery" id="gallery"></div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
